@@ -29,7 +29,9 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onLanguage:asp"
+    "onLanguage:asp",
+    "onCommand:classicAspFormatterPro.formatDocumentSafe",
+    "onCommand:classicAspFormatterPro.analyzeDocument"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -41,7 +43,8 @@
           "Classic ASP"
         ],
         "extensions": [
-          ".asp"
+          ".asp",
+          ".asa"
         ],
         "configuration": "./language-configuration.json"
       }
@@ -51,6 +54,16 @@
         "language": "asp",
         "scopeName": "text.html.asp",
         "path": "./syntaxes/asp.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "classicAspFormatterPro.formatDocumentSafe",
+        "title": "Classic ASP: Format Document Safely"
+      },
+      {
+        "command": "classicAspFormatterPro.analyzeDocument",
+        "title": "Classic ASP: Analyze Formatting Risks"
       }
     ],
     "configuration": {

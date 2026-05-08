@@ -47,6 +47,15 @@ export function getHtmlLineIndentChange(line: string, currentLevel: number): Htm
     }
   }
 
+  if (/___ASP_(?:EXPR|BLOCK)_\d+___/.test(trimmed) && firstStructuralTag === 'open') {
+    const hasClosingTag = /<\/[a-zA-Z][\w:-]*\s*>/.test(trimmed);
+    const isSelfContained = hasClosingTag || /\/>\s*$/.test(trimmed);
+
+    if (!isSelfContained) {
+      afterLevel = currentLevel;
+    }
+  }
+
   return {
     beforeLevel,
     afterLevel,

@@ -5,6 +5,7 @@ import { formatJavaScriptSegment } from './formatJavaScriptSegment';
 import {
   collapseExcessBlankLines,
   createIndent,
+  analyzeAspFormattingRisk,
   hasAmbiguousAspBlock,
   normalizeLineEndings,
   trimTrailingWhitespace,
@@ -90,7 +91,7 @@ export function formatClassicAspDocument(
   const formatterOptions = mergeOptions(options);
   const normalized = normalizeLineEndings(source);
 
-  if (formatterOptions.safeMode && hasAmbiguousAspBlock(normalized)) {
+  if (formatterOptions.safeMode && (hasAmbiguousAspBlock(normalized) || analyzeAspFormattingRisk(normalized))) {
     return source;
   }
 

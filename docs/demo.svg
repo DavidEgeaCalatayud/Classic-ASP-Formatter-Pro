@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="560" viewBox="0 0 1100 560" role="img" aria-labelledby="title desc">
+  <title id="title">Classic ASP Formatter Pro demo</title>
+  <desc id="desc">Before and after formatting view for a Classic ASP table with inline VBScript.</desc>
+  <rect width="1100" height="560" fill="#111827"/>
+  <rect x="40" y="40" width="1020" height="480" rx="8" fill="#f8fafc"/>
+  <text x="80" y="95" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Classic ASP Formatter Pro</text>
+  <text x="80" y="130" fill="#475569" font-family="Segoe UI, Arial, sans-serif" font-size="18">Safe indentation for mixed HTML, VBScript, CSS and JavaScript.</text>
+  <rect x="80" y="170" width="450" height="300" rx="6" fill="#1f2937"/>
+  <rect x="570" y="170" width="450" height="300" rx="6" fill="#1f2937"/>
+  <text x="105" y="205" fill="#fca5a5" font-family="Consolas, monospace" font-size="18">Before</text>
+  <text x="595" y="205" fill="#86efac" font-family="Consolas, monospace" font-size="18">After</text>
+  <text x="105" y="245" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">&lt;% If mostrar Then %&gt;</text>
+  <text x="105" y="273" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">&lt;tr&gt;</text>
+  <text x="105" y="301" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">&lt;td&gt;&lt;%= nombre %&gt;&lt;/td&gt;</text>
+  <text x="105" y="329" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">&lt;/tr&gt;</text>
+  <text x="105" y="357" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">&lt;% End If %&gt;</text>
+  <text x="595" y="245" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">&lt;% If mostrar Then %&gt;</text>
+  <text x="595" y="273" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">    &lt;tr&gt;</text>
+  <text x="595" y="301" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">        &lt;td&gt;&lt;%= nombre %&gt;&lt;/td&gt;</text>
+  <text x="595" y="329" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">    &lt;/tr&gt;</text>
+  <text x="595" y="357" fill="#e5e7eb" font-family="Consolas, monospace" font-size="16">&lt;% End If %&gt;</text>
+</svg>

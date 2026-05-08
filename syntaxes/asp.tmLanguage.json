@@ -14,8 +14,28 @@
     "asp": {
       "patterns": [
         {
-          "name": "source.asp.embedded.html",
-          "begin": "<%[@=]?",
+          "name": "meta.directive.asp",
+          "begin": "<%@",
+          "end": "%>",
+          "patterns": [
+            {
+              "name": "keyword.other.directive.asp",
+              "match": "\\b(LANGUAGE|CODEPAGE|LCID|ENABLESESSIONSTATE|TRANSACTION)\\b"
+            },
+            {
+              "name": "string.quoted.double.asp",
+              "begin": "\"",
+              "end": "\""
+            }
+          ]
+        },
+        {
+          "name": "comment.block.include.asp",
+          "match": "<!--#include\\s+(file|virtual)=\\\"[^\\\"]+\\\"\\s*-->"
+        },
+        {
+          "name": "meta.output-expression.asp",
+          "begin": "<%=",
           "end": "%>",
           "patterns": [
             {
@@ -24,8 +44,14 @@
           ]
         },
         {
-          "name": "comment.block.include.asp",
-          "match": "<!--#include\\s+(file|virtual)=\\\"[^\\\"]+\\\"\\s*-->"
+          "name": "source.asp.embedded.html",
+          "begin": "<%",
+          "end": "%>",
+          "patterns": [
+            {
+              "include": "source.vbnet"
+            }
+          ]
         }
       ]
     }
