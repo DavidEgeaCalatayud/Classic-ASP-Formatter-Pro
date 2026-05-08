@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Classic ASP",
+  "scopeName": "text.html.asp",
+  "patterns": [
+    {
+      "include": "#asp"
+    },
+    {
+      "include": "text.html.basic"
+    }
+  ],
+  "repository": {
+    "asp": {
+      "patterns": [
+        {
+          "name": "source.asp.embedded.html",
+          "begin": "<%[@=]?",
+          "end": "%>",
+          "patterns": [
+            {
+              "include": "source.vbnet"
+            }
+          ]
+        },
+        {
+          "name": "comment.block.include.asp",
+          "match": "<!--#include\\s+(file|virtual)=\\\"[^\\\"]+\\\"\\s*-->"
+        }
+      ]
+    }
+  }
+}

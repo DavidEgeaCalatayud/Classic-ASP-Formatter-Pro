@@ -1,0 +1,11 @@
+.vscode/**
+.git/**
+node_modules/**
+src/**
+out/test/**
+*.vsix
+.eslintrc.json
+.prettierrc
+tsconfig.json
+vitest.config.ts
+package-lock.json

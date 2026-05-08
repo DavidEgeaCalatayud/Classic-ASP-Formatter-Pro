@@ -1,0 +1,127 @@
+{
+  "name": "classic-asp-formatter-pro",
+  "displayName": "Classic ASP Formatter Pro",
+  "description": "A professional formatter for Classic ASP files with mixed HTML, CSS, JavaScript and embedded VBScript.",
+  "version": "0.1.0",
+  "publisher": "David-Egea-Calatayud",
+  "author": "David Egea Calatayud",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidEgeaCalatayud/Classic-ASP-Formatter-Pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DavidEgeaCalatayud/Classic-ASP-Formatter-Pro/issues"
+  },
+  "homepage": "https://github.com/DavidEgeaCalatayud/Classic-ASP-Formatter-Pro#readme",
+  "keywords": [
+    "classic asp",
+    "asp",
+    "vbscript",
+    "formatter",
+    "vscode"
+  ],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Formatters",
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:asp"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "asp",
+        "aliases": [
+          "ASP",
+          "Classic ASP"
+        ],
+        "extensions": [
+          ".asp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "asp",
+        "scopeName": "text.html.asp",
+        "path": "./syntaxes/asp.tmLanguage.json"
+      }
+    ],
+    "configuration": {
+      "title": "Classic ASP Formatter Pro",
+      "properties": {
+        "classicAspFormatterPro.indentSize": {
+          "type": "number",
+          "default": 4,
+          "minimum": 1,
+          "maximum": 8,
+          "description": "Number of spaces to use for each indentation level."
+        },
+        "classicAspFormatterPro.useTabs": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use tabs instead of spaces for indentation."
+        },
+        "classicAspFormatterPro.formatHtml": {
+          "type": "boolean",
+          "default": true,
+          "description": "Format HTML segments."
+        },
+        "classicAspFormatterPro.formatAsp": {
+          "type": "boolean",
+          "default": true,
+          "description": "Format ASP/VBScript segments."
+        },
+        "classicAspFormatterPro.formatCss": {
+          "type": "boolean",
+          "default": true,
+          "description": "Format CSS segments."
+        },
+        "classicAspFormatterPro.formatJavaScript": {
+          "type": "boolean",
+          "default": true,
+          "description": "Format JavaScript segments."
+        },
+        "classicAspFormatterPro.safeMode": {
+          "type": "boolean",
+          "default": true,
+          "description": "Avoid formatting ambiguous blocks."
+        },
+        "classicAspFormatterPro.normalizeVbScriptKeywords": {
+          "type": "boolean",
+          "default": false,
+          "description": "Normalize common VBScript keyword casing."
+        },
+        "classicAspFormatterPro.preserveBlankLines": {
+          "type": "boolean",
+          "default": true,
+          "description": "Preserve blank lines while formatting."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/vscode": "^1.90.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "@vscode/vsce": "^2.32.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.4"
+  }
+}
