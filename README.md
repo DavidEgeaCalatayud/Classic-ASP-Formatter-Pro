@@ -452,6 +452,9 @@ Before publishing to the Visual Studio Marketplace, make sure the `publisher` fi
 
 ## Publishing Checklist
 
+A detailed first-release and Marketplace account checklist is available in [`docs/marketplace-publishing.md`](docs/marketplace-publishing.md). Publication remains a manual, explicitly approved step.
+
+
 Before publishing a release:
 
 - [ ] Compile successfully with `npm run compile`.
